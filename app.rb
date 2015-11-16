@@ -18,7 +18,8 @@ post '/party/guests' do
   guest = Guest.new(
     params['guest_name'],
     params['guest_number_of_friends'],
-    params['guest_time_of_arrival']
+    params['guest_time_of_arrival'],
+    params['guest_homepage']
   )
 
   guest.add_to_list

@@ -1,0 +1,21 @@
+body {
+  font-family: Arial;
+}
+
+table {
+  margin-top: 20px;
+  width: 400px;
+}
+
+table, td, th {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px;
+}
+
+td.align-right {
+  text-align: right;
+}
