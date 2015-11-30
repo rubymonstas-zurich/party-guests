@@ -1,6 +1,25 @@
-body {
+/* for layout */
+html, body {
   font-family: Arial;
+  height: 100%;
 }
+nav, section {
+  float: left;
+}
+nav {
+  width: 220px;
+}
+section {
+  width: 488px;
+}
+header, footer {
+  width: 720px;
+}
+footer {
+  clear: both;
+}
+
+
 
 table {
   margin-top: 20px;
