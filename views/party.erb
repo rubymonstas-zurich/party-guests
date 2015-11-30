@@ -7,70 +7,75 @@
 </head>
 
 <body>
-  <h1>Party!</h1>
+  <header><h1>Party!</h1></header>
+  <nav>
+    <h2>Navigation</h2>
+  </nav>
+  <section>
+    <h2>Content</h2>
+    <h2>Guest List</h2>
 
-  <h2>Guest List</h2>
+    <strong>We're already <%= @guests.size %> people!</strong>
 
-  <strong>We're already <%= @guests.size %> people!</strong>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Guest</th>
-        <th>Friends</th>
-        <th>Arrives</th>
-        <th>Homepage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @guests.each do |guest| %>
+    <table>
+      <thead>
         <tr>
-          <td><%= guest.name %></td>
-          <td class="align-right"><%= guest.number_of_friends %></td>
-          <td class="align-right"><%= guest.time_of_arrival %></td>
-          <td>
-            <% if guest.homepage %>
-              <a href=<%= guest.homepage %>>Homepage</a>
-            <% end %>
-          </td>
+          <th>Guest</th>
+          <th>Friends</th>
+          <th>Arrives</th>
+          <th>Homepage</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @guests.each do |guest| %>
+          <tr>
+            <td><%= guest.name %></td>
+            <td class="align-right"><%= guest.number_of_friends %></td>
+            <td class="align-right"><%= guest.time_of_arrival %></td>
+            <td>
+              <% if guest.homepage %>
+                <a href=<%= guest.homepage %>>Homepage</a>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-  <!-- <img src="party-hard.gif" /> -->
+    <h2>Sign up for the party!</h2>
 
-  <h2>Sign up for the party!</h2>
+    <form action="/party/guests" method="POST">
+      <p>
+        <label>Name:
+          <input type="text" name="guest_name" placeholder="John Doe" />
+        </label>
+      </p>
 
-  <form action="/party/guests" method="POST">
-    <p>
-      <label>Name:
-        <input type="text" name="guest_name" placeholder="John Doe" />
-      </label>
-    </p>
+      <p>
+        <label>Number of friends:
+          <input type="text" name="guest_number_of_friends" placeholder="1, 2, 3" />
+        </label>
+      </p>
 
-    <p>
-      <label>Number of friends:
-        <input type="text" name="guest_number_of_friends" placeholder="1, 2, 3" />
-      </label>
-    </p>
+      <p>
+        <label>Time of arrival:
+          <input type="text" name="guest_time_of_arrival" placeholder="20:00" />
+        </label>
+      </p>
 
-    <p>
-      <label>Time of arrival:
-        <input type="text" name="guest_time_of_arrival" placeholder="20:00" />
-      </label>
-    </p>
+      <p>
+        <label>Homepage:
+          <input type="text" name="guest_homepage" placeholder="http://www.google.com" />
+        </label>
+      </p>
 
-    <p>
-      <label>Homepage:
-        <input type="text" name="guest_homepage" placeholder="http://www.google.com" />
-      </label>
-    </p>
+      <p>
+        <input type="submit" name="submit" value="Sign up!" />
+      </p>
+    </form>
+  </section>
+  <footer><h2>Footer</h2></footer>
 
-    <p>
-      <input type="submit" name="submit" value="Sign up!" />
-    </p>
-  </form>
 
 </body>
 </html>
