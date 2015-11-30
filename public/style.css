@@ -19,6 +19,21 @@ footer {
   clear: both;
 }
 
+header h1 {
+  display: inline;
+}
+
+/* navigation */
+header ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+header ul li {
+  display: inline;
+}
+
 video {
   width: 600px;
   max-width: 100%;
