@@ -1,0 +1,4 @@
+nickname,name,date_of_birth,image_file,hobbies,friends
+peter,Peter,10.06.1986,peter.jpg,"Swimming,travelling","ines,shirley"
+ines,Ines,29.04.1982,ines.jpg,"Swimming,travelling","peter,shirley"
+shirley,Shirley,02.11.1979,shirley.jpg,"Swimming,travelling","peter,ines"

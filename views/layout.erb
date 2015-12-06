@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to our webpage!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>People in the flat
+                <ul>
+                    <li><a href="/profiles/ines">Ines</a></li>
+                    <li><a href="/profiles/shirley">Shirley</a></li>
+                    <li><a href="/profiles/peter">Peter</a></li>
+                </ul>
+            </li>
+            <li><a href="/house">Our house</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <%= yield %>
+    </main>
+
+    <footer>
+        (C) 2015 RubyMonstas Productions Ltd.
+    </footer>
+
+</body>

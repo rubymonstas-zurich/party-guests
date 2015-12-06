@@ -1,0 +1,33 @@
+<div class="profile-picture">
+  <img src="/images/<%= @profile.image_file %>" width="200" />
+</div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Name:</td>
+      <td><%= @profile.name %></td>
+    </tr>
+
+    <tr>
+      <td>Brith date:</td>
+      <td><%= @profile.date_of_birth %></td>
+    </tr>
+
+    <tr>
+      <td>Hobbies:</td>
+      <td><%= @profile.hobbies.join(', ') %></td>
+    </tr>
+
+    <tr>
+      <td>Friends:</td>
+      <td>
+        <ul>
+          <% @profile.friends.each do |friend_nickname| %>
+            <li><a href="/profiles/<%= friend_nickname %>"><%= friend_nickname %></a></li>
+          <% end %>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

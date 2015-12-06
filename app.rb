@@ -2,34 +2,22 @@ require 'sinatra'
 require 'byebug'
 
 require './guest.rb'
+require './profile_repository.rb'
 
 get '/' do
-  'Hello world!'
+  erb :home
 end
 
-get '/party' do
-  @guests = Guest.load_guests
-  erb :party
+get '/profiles/:name' do
+  @profile = ProfileRepository.find_profile(params[:name])
+
+  if @profile
+    erb :profile
+  else
+    erb :profile_not_found
+  end
 end
 
-post '/party/guests' do
-  Guest.load_guests
-
-  guest = Guest.new(
-    params['guest_name'],
-    params['guest_number_of_friends'],
-    params['guest_time_of_arrival']
-  )
-
-  guest.add_to_list
-
-  redirect '/party'
-end
-
-get '/example_form' do
-  erb :example_form
-end
-
-post '/example_form' do
-  erb :form_result
+get '/house' do
+  erb :house
 end
