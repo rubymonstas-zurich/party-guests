@@ -1,5 +1,5 @@
 <div class="profile-picture">
-  <img src="/images/<%= @profile.image_file %>" width="200" />
+  <img src="/images/<%= @profile.image_file %>" />
 </div>
 
 <table>
@@ -24,7 +24,8 @@
       <td>
         <ul>
           <% @profile.friends.each do |friend_nickname| %>
-            <li><a href="/profiles/<%= friend_nickname %>"><%= friend_nickname %></a></li>
+            <!-- TODO Don't just show the nick names here, also link to their profiles. -->
+            <li><%= friend_nickname %></li>
           <% end %>
         </ul>
       </td>

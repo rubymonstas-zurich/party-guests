@@ -8,16 +8,8 @@ get '/' do
   erb :home
 end
 
+# TODO Implement the route for /house here and render the correct template.
+
 get '/profiles/:name' do
-  @profile = ProfileRepository.find_profile(params[:name])
-
-  if @profile
-    erb :profile
-  else
-    erb :profile_not_found
-  end
-end
-
-get '/house' do
-  erb :house
+  # TODO Implement the profile page here.
 end
