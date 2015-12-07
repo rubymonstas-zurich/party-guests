@@ -7,7 +7,7 @@ class TestProfileRepository < Minitest::Test
     assert_equal 3, ProfileRepository.all_profiles.size
   end
 
-  def test_that_all_profiles_are_loaded
+  def test_profile_data
     profile = ProfileRepository.all_profiles[0]
 
     assert_equal 'Peter', profile.name
