@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'byebug'
 
-require './guest.rb'
 require './profile_repository.rb'
 
 get '/' do
